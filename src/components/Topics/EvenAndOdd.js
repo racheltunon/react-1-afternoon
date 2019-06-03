@@ -13,7 +13,7 @@ export default class EvenAndOdd extends Component {
     handleChange(val) {
         this.setState({userInput: val});
     }
-    giveEvenAndOdds(userInput){
+    assignEvenAndOdds(userInput){
         let arr = userInput.split(',');
         let evens = [];
         let odds = [];
@@ -29,7 +29,7 @@ export default class EvenAndOdd extends Component {
     }
     render() {
         return (
-          <div className="puzzleBox evemAndoddPB">
+          <div className="puzzleBox evenAndOddPB">
           <h4>Evens and Odds</h4>
                 <input className="inputLine" onChange={(e) => this.handleChange(e.target.value) }></input>
                 <button className="confirmationButton" onClick={() => {this.assignEvenAndOdds(this.state.userInput) }}>Split </button>
